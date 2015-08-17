@@ -64,7 +64,7 @@
 
         pip install Package             # 安装包 pip install requests
         pip show --files Package        # 查看安装包时安装了哪些文件
-        pip show --files Package        # 查看哪些包有更新
+        pip pip list --outdated        # 查看哪些包有更新
         pip install --upgrade Package   # 更新一个软件包
         pip uninstall Package           # 卸载软件包
 
@@ -520,7 +520,9 @@
         list()              # 变成列表可用于迭代
         eval('3+4')         # 将字符串当表达式求值 得到7
         exec 'a=100'        # 将字符串按python语句执行
-        exec(a+'=new')      # 将变量a的值作为新的变量
+        exec 'a = a + 10' |exec 'a+=10'  # 做运算
+        exec "s = 'python'" 
+        exec("'a+=new'")      # 将变量a的值作为新的变量
         tuple()             # 变成元组可用于迭代   #一旦初始化便不能更改的数据结构,速度比list快
         zip(s,t)            # 返回一个合并后的列表  s = ['11','22']  t = ['aa','bb']  [('11', 'aa'), ('22', 'bb')]
         isinstance(object,int)    # 测试对象类型 int 
