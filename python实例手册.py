@@ -672,17 +672,18 @@
                 raise ShortInputException(len(s), 3)    # 触发异常
         except EOFError:
             print '\nWhy did you do an EOF on me?'
-        except ShortInputException, x:      # 捕捉指定错误信息
+        except ShortInputException as x:      # 捕捉指定错误信息
             print 'ShortInputException:  %d | %d' % (x.length, x.atleast)
         except Exception as err:            # 捕捉所有其它错误信息内容
             print str(err)
         #except urllib2.HTTPError as err:   # 捕捉外部导入模块的错误
         #except:                            # 捕捉所有其它错误 不会看到错误内容
         #        print 'except'
-        finally:                            # 无论什么情况都会执行 关闭文件或断开连接等
-               print 'finally' 
         else:                               # 无任何异常 无法和finally同用
             print 'No exception was raised.' 
+        finally:                            # 无论什么情况都会执行 关闭文件或断开连接等
+            print 'finally' 
+
 
         不可捕获的异常
 
