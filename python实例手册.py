@@ -64,7 +64,7 @@
 
         pip install Package             # 安装包 pip install requests
         pip show --files Package        # 查看安装包时安装了哪些文件
-        pip pip list --outdated        # 查看哪些包有更新
+        pip list --outdated        # 查看哪些包有更新
         pip install --upgrade Package   # 更新一个软件包
         pip uninstall Package           # 卸载软件包
 
